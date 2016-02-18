@@ -2,6 +2,8 @@ package map.karen.com.residemenu.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewConfiguration;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -18,6 +21,7 @@ import map.karen.com.residemenu.R;
 import map.karen.com.residemenu.fragment.HomeFragment;
 import map.karen.com.residemenu.fragment.NeaerFragment;
 import map.karen.com.residemenu.fragment.SettingFragment;
+import map.karen.com.residemenu.utils.Tools;
 import map.karen.com.residemenu.view.ResideMenu;
 import map.karen.com.residemenu.view.ResideMenuItem;
 
@@ -49,7 +53,7 @@ public class ResideMenuActivity extends BaseActivity implements OnClickListener 
 	@Override
 	void initView() {
 		resideMenu = new ResideMenu(this);
-		resideMenu.setBackground(R.drawable.menu_background);
+		resideMenu.setBackground(R.drawable.slidingpane_background);
 		resideMenu.attachToActivity(this);
 		resideMenu.setMenuListener(menuListener);
 		resideMenu.setScaleValue(0.6f);
